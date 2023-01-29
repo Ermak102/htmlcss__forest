@@ -1,0 +1,45 @@
+.main{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__content{
+    text-align: center;
+    --main-transform:translate3d(0, calc(var(--scrollTop) / -8), 0);
+}
+
+.main__header{
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 2);
+    text-shadow: 0 0 8px rgb(236, 162, 113);
+    letter-spacing: calc(var(--index) / 4);
+
+    margin-bottom: calc(var(--index) * 2);
+
+    will-change: transform;
+    transform: var(--main-transform);
+    transition: var(--transition-transform);
+}
+
+.main__description{
+    max-width: calc(var(--index) * 40);
+    margin: 0 auto;
+
+    font-size: calc(var(--index) * 0.65);
+    letter-spacing: calc(var(--index) / 10);
+    text-shadow: 0 0 4px rgb(248, 191, 154);
+
+    opacity: 0.85; 
+
+    will-change: transform;
+    transform: var(--main-transform);
+    transition: var(--transition-transform);
+}
